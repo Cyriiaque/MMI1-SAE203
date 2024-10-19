@@ -1,0 +1,29 @@
+<div class="moviemore">
+    <div class="moviemore__trailer"><iframe width="560" height="315" src="{{trailer}}controls=0&autoplay=1&mute=1"
+            frameborder="0" allowfullscreen></iframe></div>
+    <div class=" moviemore__info">
+        <h1 class="moviemore__titre">{{titre}}</h1>
+        <div class="moviemore__description">
+            <h2 class="moviemore__h2">{{realisateur}}</h2>
+            <h2 class="moviemore__h2">{{annee}}</h2>
+        </div>
+    </div>
+    <div class="moviemore__rating">
+        <h2 class="moviemore__h3">Note moyenne de ce film:</h2>
+        <div class="starsaverage">
+            <div class="staraverage">★</div>
+            <div class="staraverage">★</div>
+            <div class="staraverage">★</div>
+            <div class="staraverage">★</div>
+            <div class="staraverage">★</div>
+        </div>
+        <h2 class="moviemore__h3">Vous pouvez vous aussi voter:</h2>
+        <div class="stars">
+            <div class="star" onclick="onStarClick(1,{{id_movies}})">★</div>
+            <div class="star" onclick="onStarClick(2,{{id_movies}})">★</div>
+            <div class="star" onclick="onStarClick(3,{{id_movies}})">★</div>
+            <div class="star" onclick="onStarClick(4,{{id_movies}})">★</div>
+            <div class="star" onclick="onStarClick(5,{{id_movies}})">★</div>
+        </div>
+    </div>
+</div>

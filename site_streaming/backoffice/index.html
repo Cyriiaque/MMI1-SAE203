@@ -1,0 +1,106 @@
+<html>
+
+<head>
+    <title>Back Office</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body onload="init()">
+
+    <section class="backoffice">
+
+        <div class="backoffice__nav">
+            <h1 class="backoffice__nav-h1">BACK OFFICE</h1>
+            <h2 class="backoffice__nav-h2">Les films</h2>
+        </div>
+
+        <form method='GET' action="../server/script.php" class="backoffice__formulaire">
+
+            <h3 class="backoffice__form-h3">Mettre à jour ou ajouter un film</h3>
+
+            <input type="text" name="titre" placeholder="Saisir un titre" onchange="autoCompleteMovie()" id="titre">
+            <input type="text" name="realisateur" placeholder="Saisir un réalisateur">
+            <input type="number" name="annee" placeholder="Saisir l'année de sortie">
+            <input type="text" name="url_image" placeholder="Saisir l'url de la page de couverture du film">
+            <input type="text" name="url_trailer" placeholder="Saisir l'url du trailer du film">
+            <select name="categorie" id="categorie" class="selectcategory">
+            </select>
+
+            <button type="submit" value="addmovie" name="action">Update</button>
+
+        </form>
+
+
+        <form method='GET' action="../server/script.php" class="backoffice__formulaire">
+
+            <h3 class="backoffice__form-h3">Supprimer un film</h3>
+            <input type="text" name="titre" placeholder="Saisir un titre">
+            <button type="submit" value="delmovie" name="action">Delete</button>
+
+        </form>
+
+        <form method='GET' action="../server/script.php" class="backoffice__formulaire">
+
+            <h3 class="backoffice__form-h3">Ajouter un profil</h3>
+            <input type="text" name="name" placeholder="Saisir un profil">
+            <button type="submit" value="addprofile" name="action">Add</button>
+
+        </form>
+
+        <form method='GET' action="../server/script.php" class="backoffice__formulaire">
+
+            <h3 class="backoffice__form-h3">Supprimer un profil</h3>
+            <select name="idprofile" id="idprofile" class="selectprofile">
+            </select>
+            <button type="submit" value="deleteprofile" name="action">Delete</button>
+
+        </form>
+
+        <form method='GET' action="../server/script.php" class="backoffice__formulaire">
+
+            <h3 class="backoffice__form-h3">Mettre un film en avant</h3>
+            <select name="idmovie" id="idmovie" class="selectnotpromoted">
+            </select>
+            <button type="submit" value="addpromote" name="action">Add</button>
+
+        </form>
+
+        <form method='GET' action="../server/script.php" class="backoffice__formulaire">
+
+            <h3 class="backoffice__form-h3">Ne plus mettre en avant un film</h3>
+            <select name="idmovie" id="idmovie" class="selectpromoted">
+            </select>
+            <button type="submit" value="deletepromote" name="action">Delete</button>
+
+        </form>
+
+        <form method='GET' action="../server/script.php" class="backoffice__formulaire">
+
+            <h3 class="backoffice__form-h3">Réinitialiser la note d'un film</h3>
+            <select name="idrating" id="idrating" class="selectrating">
+            </select>
+            <button type="submit" value="deleterating" name="action">Delete</button>
+
+        </form>
+
+    </section>
+
+    <script type="module">
+        import { Category } from './category/script.js';
+        window.Category = Category;
+
+        import { Profile } from './profil/script.js';
+        window.Profile = Profile;
+
+        import { Promote } from './promote/script.js';
+        window.Promote = Promote;
+
+        import { Rating } from './rating/script.js';
+        window.Rating = Rating;
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

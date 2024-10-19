@@ -1,0 +1,16 @@
+<div class="movie">
+    <div class="movie__menu" type="submit" value="getmovie" name="action" onclick="requestMovieMore('{{id_movies}}')">
+        <img src="./asset/{{image}}" alt="affiche du film" class="movie__image">
+    </div>
+    <div class="movie__container">
+        <h1 class="movie__container-title">{{titre}}</h1>
+        <div class="movie__container-sub">
+            <h2 class="movie__container-title2">{{realisateur}}</h2>
+            <h2 class="movie__container-title2">{{annee}}</h2>
+        </div>
+    </div>
+    <div class="movie__button" onclick="requestaddPlaylist('{{id_movies}}')">
+        <h1 class="movie__title-button">Ma liste</h1>
+        <h1 class="movie__plus-button">+</h1>
+    </div>
+</div>

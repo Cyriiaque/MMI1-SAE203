@@ -1,0 +1,132 @@
+body {
+  background-color: var(--bg-color);
+}
+
+.page{
+  overflow: hidden;
+  font-family: var(--ff-sans);
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  margin: 0;
+  background-color: var(--bg-color);
+  padding-block: 2rem;
+  padding-inline: 3rem;
+}
+
+.header__logo{
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+}
+
+.header__container-right{
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.header__research{
+  display: flex;
+  flex-direction: row;
+}
+
+.header__searchbar{
+  background: none;
+  border-style: none;
+  outline: none;
+  color: var(--clr-white);
+}
+
+.header__search{
+  width: 1.5rem;
+  width: 1.5rem;
+}
+
+.header__burger {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 150;
+}
+
+.header__burger-input{
+  opacity: 0;
+  position: absolute;
+  top: 0.2rem;
+  cursor: pointer;
+  scale: 1.5;
+}
+
+.header__burger-icon{
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--clr-white);
+}
+
+.nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+  background: var(--clr-white);
+  transition: translate .3s ease-in-out;
+  inset: 0;
+  translate: 110% 0;
+}
+
+.header__container:has(.header__burger-input:checked) ~ .nav {
+  transition: translate .3s ease-in-out;
+  translate: 40% 0;
+}
+
+.nav__item-button{
+  width: 4rem;
+  height: 1.5rem;
+  background-color: var(--clr-dark);
+  border: solid var(--clr-white) 1px;
+  border-radius: 1rem;
+  color: var(--clr-white);
+  transition: 0.5 ease-in-out;
+}
+
+.main{
+  position: relative;
+  margin-top: 6rem;
+  padding: 1rem;
+}
+
+.nav__elt-titre2 {
+  color: var(--clr-white);
+  font-size: 1.4rem;
+  font-weight:700;
+  margin-block: 0;
+  margin-inline: 1rem;
+}
+
+.promotes{
+  display: flex;
+  justify-content: start;
+  flex-direction: row;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  overflow-x: scroll;
+  gap: 1rem;
+}
+
+.movies{
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}

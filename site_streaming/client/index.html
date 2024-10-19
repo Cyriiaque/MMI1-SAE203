@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+</head>
+
+<body onload="init()">
+    <div class="page">
+        <div class="header">
+            <div class="header__container">
+                <svg width="720" height="720" viewBox="0 0 720 720" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="header__logo" onclick="requestMovie()">
+                    <path
+                        d="M354.213 465.072h-42.985V98.658c0-3.062-1.998-5.4-4.677-6.293-2.891-.893-5.74.17-7.398 2.678L1.106 535.822c-1.445 1.998-1.445 4.507-.17 6.675 1.063 2.168 3.232 3.614 5.74 3.614H226.62v49.66c0 3.402 3.061 6.463 6.675 6.463h71.259c3.614 0 6.675-3.061 6.675-6.463v-49.66h43.028c3.614 0 6.675-2.891 6.675-6.675v-67.688c-.043-3.784-2.934-6.675-6.718-6.675Zm-127.765.213h-82.611l82.611-122.195v122.195ZM715.823 352.955 501.11 228.932c-2.338-1.446-5.06 1.062-3.954 3.614 17.262 39.073 26.828 82.441 26.828 127.807s-9.523 88.563-26.658 127.424c-1.063 2.509 1.616 4.847 3.954 3.614l214.543-123.81c5.57-3.487 5.57-11.395 0-14.626Z"
+                        fill="#fff" />
+                </svg>
+
+                <div class="header__container-right">
+                    <div class="header__research">
+                        <input type="text" onkeyup="searchMovie()" id="searchbar" name="search"
+                            placeholder="Rechercher un film.." class="header__searchbar">
+                        <img src="asset/search.svg" alt="search" class="header__search">
+                    </div>
+
+                    <div class="header__burger">
+                        <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="header__burger-icon">
+                            <path
+                                d="M0.232819 0.898855V2.70812H14.7069V0.898855H0.232819ZM0.232819 6.27236V8.08162H14.7069V6.27236H0.232819ZM0.232819 11.7001V13.5094H14.7069V11.7001H0.232819Z"
+                                fill="currentColor" />
+                        </svg>
+                        <input type="checkbox" class="header__burger-input">
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <p class="nav__item-titre">Catégorie</p>
+                        <select name="categorie" id="categorie" onchange="requestMovie()" class="selectcategory">
+                        </select>
+                    </li>
+
+                    <li class="nav__item">
+                        <p class="header__titre">Profil</p>
+                        <select name="profile" id="profile" class="selectprofile">
+                        </select>
+                    </li>
+
+                    <li class="nav__item">
+                        <button onclick="requestPlaylist()" class="nav__item-button">Playlist</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main">
+            <p class="nav__elt-titre2">Nouveauté sur Play</p>
+
+            <div class="promotes">
+            </div>
+
+            <p class="nav__elt-titre2">Tous vos films à la demande</p>
+            <div class="movies">
+            </div>
+        </div>
+
+        <script type="module">
+            import { Movies } from './component/movies/script.js';
+            window.Movies = Movies;
+
+            import { Moviemore } from './component/moviemore/script.js';
+            window.Moviemore = Moviemore;
+
+            import { Category } from './component/category/script.js';
+            window.Category = Category;
+
+            import { Profile } from './component/profile/script.js';
+            window.Profile = Profile;
+
+            import { Playlist } from './component/playlist/script.js';
+            window.Playlist = Playlist;
+
+            import { Promote } from './component/promote/script.js';
+            window.Promote = Promote;
+        </script>
+
+        <script src="./main.js"></script>
+    </div>
+</body>
+
+</html>

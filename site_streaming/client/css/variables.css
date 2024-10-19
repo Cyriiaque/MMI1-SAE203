@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'FyranSans';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url('../asset/fyran-sans-regular.woff2') format('woff2'),
+    url('../asset/fyran-sans-regular.woff') format('woff');
+  font-display: fallback;
+}
+@font-face {
+  font-family: 'FyranSans';
+  font-style: normal;
+  font-weight: 500;
+  src:
+    url('../asset/fyran-sans-regular.woff2') format('woff2'),
+    url('../asset/fyran-sans-regular.woff') format('woff');
+  font-display: fallback;
+}
+
+:root {
+  --clr-dark: hsl(0, 0%, 0%);
+  --clr-grey: hsl(0, 0%, 25%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-red: hsl(353, 100%, 44%);
+  --clr-red-hover: hsl(354, 97%, 39%);
+  --bg-color: hsl(240, 4%, 9%);
+
+  --ff-sans: 'FyranSans', Helvetica, sans-serif;
+}

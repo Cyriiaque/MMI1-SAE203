@@ -1,0 +1,8 @@
+@import './reset.css';
+@import './variables.css';
+@import './utilities.css';
+
+@import '../component/movies/style.css';
+@import '../component/moviemore/style.css';
+@import '../component/category/style.css';
+@import '../component/profile/style.css';
